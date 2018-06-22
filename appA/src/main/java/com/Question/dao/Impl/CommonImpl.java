@@ -4,6 +4,7 @@ import com.Question.dao.Common;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -143,7 +144,22 @@ public class CommonImpl implements Common{
 
     }
 
-
+    @Override
+    public  ArrayList<Integer> findRow(int rowIndex) {
+        ArrayList<Integer> results = new ArrayList<Integer>();
+        if(rowIndex<0)
+            return results;
+        results.add(1);
+        for(int i=1;i<=rowIndex;i++)
+        {
+            for(int j=results.size()-2;j>=0;j--)
+            {
+                results.set(j+1,results.get(j)+results.get(j+1));
+            }
+            results.add(1);
+        }
+        return results;
+    }
 
     }
 

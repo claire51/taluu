@@ -15,4 +15,5 @@ public interface Common {
    boolean isTriplet(int arr[], int n);
    boolean isValid(String s) ;
    void genParenthesis(ArrayList<String> result, String s, int left, int right);
+   ArrayList<Integer> findRow(int rowIndex) ;
 }
