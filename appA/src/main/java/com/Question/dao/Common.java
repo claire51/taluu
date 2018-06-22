@@ -7,7 +7,7 @@ import java.util.ArrayList;
 /**
  * Created by Kelvin on 21/06/2018.
  */
-
+//a common inteface
 @Local
 public interface Common {
    String  reverse(String inputString);
